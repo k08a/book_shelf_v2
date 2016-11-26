@@ -1,4 +1,9 @@
 <h1>新規追加</h1>
+
+<% flash.each do |key, value| %>
+   <%= content_tag(:div, value, class: "#{key}") %>
+<% end %>
+
 <%= form_for @book do |f| %>
     <p>書籍名<br>
     <%= f.text_field :name %></p>
@@ -10,7 +15,7 @@
     <%= f.date_field :publish_date %></p>
     <p><%= f.submit "追加" %></p>
 <% end %>
-<%= link_to "一覧へ戻る", books_path %>
+<%= link_to "一覧へ戻る", root_path %>
 
 
 
