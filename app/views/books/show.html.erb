@@ -4,6 +4,8 @@
 <p>価格: <%= @book.price %></p>
 <p>出版社: <%= @book.publish %></p>
 <p>刊行日: <%= @book.publish_date %></p>
+
+<hr>
 <%= link_to "一覧へ",books_path %>
-<%= link_to "編集",edit_book_path %>
-<%= link_to "削除",book_path,method: :delete %>
+<%= link_to "編集",edit_book_path(@book) %>
+<%= link_to "削除",book_path(@book),method: :delete %>
