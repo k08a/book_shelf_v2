@@ -1,5 +1,9 @@
-<h1>詳細</h1>
-<p><%= @book.name %></P>
-<p><%= @book.price %></p>
-<p><%= @book.publish %></p>
-<p><%= @book.publish_date %></p>
+<h1>書籍詳細</h1>
+<p>ID: <%= @book.id %></p>
+<p>書籍名: <%= @book.name %></P>
+<p>価格: <%= @book.price %></p>
+<p>出版社: <%= @book.publish %></p>
+<p>刊行日: <%= @book.publish_date %></p>
+<%= link_to "一覧へ",books_path %>
+<%= link_to "編集",edit_book_path %>
+<%= link_to "削除",book_path,method: :delete %>
